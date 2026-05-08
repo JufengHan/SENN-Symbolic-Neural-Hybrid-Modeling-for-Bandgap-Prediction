@@ -165,7 +165,13 @@ Br + Cl + I ≈ 1
 eV
 ```
 
----
+## 🌐 在线网页演示
+
+我们提供了一个基于 SENN 的钙钛矿带隙在线预测界面：
+
+👉 [SENN-Bandgap 在线预测网页](https://senn-bandgap-web-qu64kxosjmv7z5ndz4jgca.streamlit.app/)
+
+用户无需在本地安装 Python 包，即可直接输入钙钛矿组分比例，并获得对应的带隙预测结果。
 
 ## 📖 研究意义
 
