@@ -7,6 +7,16 @@ In addition, we implement **SENN (Symbolically Encoded Neural Network)** and oth
 
 ---
 
+## 🌐 Online Web Demo
+
+A web-based SENN bandgap prediction interface is available here:
+
+👉 [SENN-Bandgap Web App](https://senn-bandgap-web-qu64kxosjmv7z5ndz4jgca.streamlit.app/)
+
+Users can directly input the composition fractions and obtain the predicted perovskite bandgap without installing the package locally.
+
+---
+
 ## 📂 Project Structure
 
 <pre>
@@ -80,6 +90,10 @@ Evaluation metrics are stored as `.txt` files, including R², RMSE, MAE, and oth
 # SENN-Bandgap Quick Start
 
 This project provides an installable SENN-based bandgap prediction package. Users can directly install the package via `pip` and predict the bandgap of perovskite compositions without retraining the model.
+
+Users may also use the online web interface directly:
+
+👉 [SENN-Bandgap Web App](https://senn-bandgap-web-qu64kxosjmv7z5ndz4jgca.streamlit.app/)
 
 The input order is fixed as:
 
