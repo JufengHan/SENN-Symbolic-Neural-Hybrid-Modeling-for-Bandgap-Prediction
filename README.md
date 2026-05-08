@@ -5,17 +5,6 @@
 This project leverages the **EQL (Equation Learner) network** to obtain symbolic mathematical expressions as encoders, which guide neural networks in modeling the relationship between **perovskite material compositions and their bandgaps**.  
 In addition, we implement **SENN (Symbolically Encoded Neural Network)** and other classical machine learning methods as baselines for comparison, providing insights into both accuracy and interpretability.
 
----
-
-## 🌐 Online Web Demo
-
-A web-based SENN bandgap prediction interface is available here:
-
-👉 [SENN-Bandgap Web App](https://senn-bandgap-web-qu64kxosjmv7z5ndz4jgca.streamlit.app/)
-
-Users can directly input the composition fractions and obtain the predicted perovskite bandgap without installing the package locally.
-
----
 
 ## 📂 Project Structure
 
@@ -178,6 +167,16 @@ The predicted bandgap is reported in:
 ```text
 eV
 ```
+
+---
+
+## 🌐 Online Web Demo
+
+A web-based SENN bandgap prediction interface is available here:
+
+👉 [SENN-Bandgap Web App](https://senn-bandgap-web-qu64kxosjmv7z5ndz4jgca.streamlit.app/)
+
+Users can directly input the composition fractions and obtain the predicted perovskite bandgap without installing the package locally.
 
 ---
 
