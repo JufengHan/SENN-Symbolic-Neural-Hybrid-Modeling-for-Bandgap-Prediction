@@ -61,6 +61,97 @@ Prediction results: stored as .csv files (True vs Predicted bandgap values).
 
 Evaluation metrics: stored as .txt files (R², RMSE, MAE, etc.).
 
+
+# SENN-Bandgap Quick Start
+
+This project provides an installable SENN-based bandgap prediction package. Users can directly install the package via `pip` and predict the bandgap of perovskite compositions without retraining the model.
+
+The input order is fixed as:
+
+```text
+[MA, FA, Cs, Br, Cl, I]
+```
+
+where `MA`, `FA`, and `Cs` denote A-site composition fractions, while `Br`, `Cl`, and `I` denote X-site composition fractions.
+
+---
+
+## Installation
+
+```bash
+pip install senn-bandgap
+```
+
+---
+
+## Python Usage
+
+Create a Python file, for example `predict.py`:
+
+```python
+from senn_bandgap import BandgapPredictor
+
+predictor = BandgapPredictor()
+
+bandgap = predictor.predict_one(
+    MA=0.0,
+    FA=1.0,
+    Cs=0.0,
+    Br=0.0,
+    Cl=0.0,
+    I=1.0,
+)
+
+print(f"Predicted bandgap: {bandgap:.6f} eV")
+```
+
+Run:
+
+```bash
+python predict.py
+```
+
+---
+
+## Command-Line Usage
+
+After installation, the predictor can also be used directly from the terminal:
+
+```bash
+senn-bandgap --MA 0 --FA 1 --Cs 0 --Br 0 --Cl 0 --I 1
+```
+
+Example output:
+
+```text
+Predicted bandgap: 1.520524 eV
+```
+
+Another example with mixed compositions:
+
+```bash
+senn-bandgap --MA 0 --FA 0.9 --Cs 0.1 --Br 0.2 --Cl 0 --I 0.8
+```
+
+---
+
+## Input Requirements
+
+The recommended composition constraints are:
+
+```text
+MA + FA + Cs ≈ 1
+Br + Cl + I ≈ 1
+```
+
+The predicted bandgap is reported in:
+
+```text
+eV
+```
+
+---
+
 📖 Research Significance
 
 The EQL network generates symbolic expressions that act as encoders, helping neural networks capture underlying physical relations.
