@@ -1,3 +1,5 @@
+[中文](README.zh-CN.md) | English
+
 # 🌟 Perovskite Bandgap Modeling with EQL & Neural Networks
 
 This project leverages the **EQL (Equation Learner) network** to obtain symbolic mathematical expressions as encoders, which guide neural networks in modeling the relationship between **perovskite material compositions and their bandgaps**.  
@@ -6,7 +8,6 @@ In addition, we implement **SENN (Symbolically Encoded Neural Network)** and oth
 ---
 
 ## 📂 Project Structure
-
 
 <pre>
 .
@@ -24,6 +25,8 @@ In addition, we implement **SENN (Symbolically Encoded Neural Network)** and oth
 └── README.md
 </pre>
 
+---
+
 ## ⚙️ Environment Setup
 
 First, create a virtual environment and install dependencies:
@@ -31,36 +34,48 @@ First, create a virtual environment and install dependencies:
 ```bash
 python -m venv .venv
 source .venv/bin/activate    # On Windows: .venv\Scripts\activate
+```
 
-Pip Key dependencies:
+Key dependencies:
 
-numpy, pandas
-
+```text
+numpy
+pandas
 scikit-learn
-
 torch
+DySymNet  # for symbolic regression
+```
 
-DySymNet (for symbolic regression)
+---
 
-🚀 Usage
-1. Train the EQL Encoder
+## 🚀 Usage
+
+### 1. Train the EQL Encoder
+
+```bash
 python EQL.py
+```
 
-2. Train SENN and Other ML Models
+### 2. Train SENN and Other ML Models
 
-Navigate into the models/ directory and run the corresponding scripts:
+Navigate into the `models/` directory and run the corresponding scripts:
 
+```bash
 python models/senn.py
 python models/rf.py
 python models/svr.py
 python models/gbdt.py
+```
 
-📊 Outputs
+---
 
-Prediction results: stored as .csv files (True vs Predicted bandgap values).
+## 📊 Outputs
 
-Evaluation metrics: stored as .txt files (R², RMSE, MAE, etc.).
+Prediction results are stored as `.csv` files, including true and predicted bandgap values.
 
+Evaluation metrics are stored as `.txt` files, including R², RMSE, MAE, and other metrics.
+
+---
 
 # SENN-Bandgap Quick Start
 
@@ -152,7 +167,7 @@ eV
 
 ---
 
-📖 Research Significance
+## 📖 Research Significance
 
 The EQL network generates symbolic expressions that act as encoders, helping neural networks capture underlying physical relations.
 
